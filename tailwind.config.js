@@ -1,0 +1,27 @@
+module.exports = {
+  content: [
+    "./src/App.js",
+    "./src/components/LoginSignup/LoginSignup.js",
+    "./src/components/LoginSignup/SignupLogin.js",
+    "./src/components/LandingPage/LandingPage.js",
+    "./src/components/Navbar/Navbar.js",
+    "./src/components/Navbar/Dropdown.js",
+    "./src/components/MainPage/MainPage.js",
+    "./src/components/AboveFooter/AboveFooter.js",
+    "./src/components/Footer/Footer.js",
+    "./src/components/Categories/Categories.js",
+    "./src/components/JobFields/JobFields.js",
+    "./src/components/AboutCompany/AboutCompany.js",
+    "./src/pages/About/AboutUs/AboutUs.js",
+    "./src/pages/Jobs/Jobs.js",
+    "./src/pages/Jobs/JobsList.js",
+    "./src/pages/Jobs/JobsLists.js",
+    "./src/pages/Jobs/JobsSearch.js",
+    "./src/pages/Navbar/Navbar.js",
+    "./src/pages/About/Navbar/Navbar.js",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
