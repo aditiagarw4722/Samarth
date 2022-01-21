@@ -1,20 +1,23 @@
 import React from 'react';
 import './Navbar.css';
 import Logo from "../../assets/Logo.svg";
-import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
+import Bell from "../../assets/Bell.svg";
+import Profile from "../../assets/Profile.svg";
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 import { Link } from 'react-router-dom';
 
 export const Navbar = ({ toggle }) => {
     return (
         <nav
-            className='flex justify-between items-center h-16 bg-white text-black relative font-sans border-b-2 mt-2'
+            className='flex justify-between items-center h-16 bg-white text-black relative font-sans border-b-2 mt-3'
             role='navigation'
         >
-            <div className='flex'>
-                <img src={Logo} alt='img' className='w-10 h-10 ml-14 mt-1' />
-                <span className='text-3xl font-bold text-black mt-1 ml-3'>HireMe</span>
-            </div>
+            <Link to='/dashboard'>
+                <div className='flex'>
+                    <img src={Logo} alt='img' className='w-10 h-10 ml-14' />
+                    <span className='text-3xl font-bold text-black ml-3'>HireMe</span>
+                </div>
+            </Link>
             <div className='px-4 cursor-pointer md:hidden' onClick={toggle}>
                 <svg
                     className='w-8 h-8'
@@ -31,19 +34,22 @@ export const Navbar = ({ toggle }) => {
                     />
                 </svg>
             </div>
-            <div className='pr-8 md:flex  hidden'>
-                <Link to='/AboutUs'>
+            <div className='pr-8 md:flex hidden'>
+                <Link to='/AboutUs' className='mt-1'>
                     <span className='text-xl font-bold text-black'>About Us</span>
                 </Link>
-                <Link to='/Jobs'>
+                <Link to='/Jobs' className='mt-1'>
                     <span className='text-xl font-bold text-blac ml-8'>Jobs</span>
                 </Link>
-                <button className="bg-transparent text-violet-700 font-bold border border-violet-700 border-2 rounded ml-20 py-2 px-8">
-                    Post a Job
-                </button>
-                <NotificationsOutlinedIcon className='ml-9 mt-1'></NotificationsOutlinedIcon>
-                <div className='flex flex-row'>
-                    <span className="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-12 mb-2 ml-9">😎<KeyboardArrowDownOutlinedIcon></KeyboardArrowDownOutlinedIcon></span>
+                <Link to='/Posts'>
+                    <button className="bg-transparent text-indigo-700 font-bold border border-indigo-700 border-2 rounded ml-10 py-2 px-8">
+                        Post a Job
+                    </button>
+                </Link>
+                <img src={Bell} alt='img' className='w-10 h-9 ml-10 mr-8 mt-1' />
+                <div className='flex flex-row bg-gray-300 py-2 px-1 rounded-full'>
+                    <img src={Profile} alt='img' className='w-10 h-9 ml-2 mt-1' />
+                    <KeyboardArrowDownOutlinedIcon className='mt-2'></KeyboardArrowDownOutlinedIcon>
                 </div>
             </div>
         </nav>

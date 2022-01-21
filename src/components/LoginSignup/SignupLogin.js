@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './SignupLogin.css';
-import firstpic from "../../assets/Illustration.svg";
+import firstpic from "../../assets/LoginSignup.svg";
 import swal from 'sweetalert';
 
 export const SignupLogin = () => {
@@ -45,7 +45,7 @@ export const SignupLogin = () => {
             </div>
             <div className="w-11/12 h-11/12 shadow-default lg:mt-10 lg:ml-10 py-10 px-1">
                 <blockquote className="text-2xl font-medium text-center">
-                    <p className="text-xl font-semibold">Welcome to JobPortal Web!!</p>
+                    <p className="text-xl font-semibold">Welcome to Hostel Managment Web!!</p>
                 </blockquote>
 
                 <div className="text-primary m-6">

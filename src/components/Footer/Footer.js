@@ -82,16 +82,16 @@ export const Footer = () => {
                         </h2>
                         <ul className="mb-8 space-y-2 text-sm list-none">
                             <li className='text-left'>
-                                <a className="text-violet-600 hover:text-violet-800 text-lg mr-14">About Us</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-14">About Us</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-violet-600 hover:text-violet-800 text-lg mr-12">Our Mission</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-12">Our Mission</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-violet-600 hover:text-violet-800 text-lg mr-12">Contact Us</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-12">Contact Us</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-violet-600 hover:text-violet-800 text-lg mr-20">Blog</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-20">Blog</a>
                             </li>
                         </ul>
                     </div>
@@ -101,13 +101,13 @@ export const Footer = () => {
                         </h2>
                         <ul className="mb-8 space-y-2 text-sm list-none">
                             <li className='text-left'>
-                                <a className="text-violet-600 hover:text-violet-800 text-lg mr-14">Post a job</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-14">Post a job</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-violet-600 hover:text-violet-800 text-lg mr-12">Help</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-12">Help</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-violet-600 hover:text-violet-800 mr-12 text-lg">Grievances</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 mr-12 text-lg">Grievances</a>
                             </li>
                         </ul>
                     </div>
@@ -117,19 +117,19 @@ export const Footer = () => {
                         </h2>
                         <ul className="mb-8 space-y-2 text-sm list-none">
                             <li className='text-left'>
-                                <a className="text-violet-600 hover:text-violet-800 text-lg">Your account</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg">Your account</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-violet-600 hover:text-violet-800 text-lg">Find a job</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg">Find a job</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-violet-600 hover:text-violet-800 text-lg">Grievances</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg">Grievances</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-violet-600 hover:text-violet-800 text-lg">Chat with us</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg">Chat with us</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-violet-600 hover:text-violet-800 text-lg">Help</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg">Help</a>
                             </li>
                         </ul>
                     </div>

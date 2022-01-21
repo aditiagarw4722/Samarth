@@ -1,9 +1,15 @@
 import './App.css';
 import { LoginSignup } from './components/LoginSignup/LoginSignup';
 import { SignupLogin } from './components/LoginSignup/SignupLogin';
+import { LandingPage } from './components/LandingPage/LandingPage';
 import { Navbar } from './components/Navbar/Navbar';
 import { Dropdown } from './components/Navbar/Dropdown';
+import { MainPage } from './components/MainPage/MainPage';
+import { AboveFooter } from './components/AboveFooter/AboveFooter';
 import { Footer } from './components/Footer/Footer';
+import { Categories } from './components/Categories/Categories';
+import { JobFields } from './components/JobFields/JobFields';
+import { AboutCompany } from './components/AboutCompany/AboutCompany';
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -19,10 +25,6 @@ function App() {
           <Route exact path="/signuplogin" element={<SignupLogin />} />
 
           <Route exact path="/dashboard" element={<Dashboard />} />
-
-          <Route exact path="/AboutUs" element={<Us />} />
-
-          <Route exact path="/Jobs" element={<Job />} />
 
           <Route exact path="/AboutCompany" element={<Companies />} />
 
@@ -57,6 +59,11 @@ function App() {
       <>
         <Navbar toggle={toggle} />
         <Dropdown isOpen={isOpen} toggle={toggle} />
+        <MainPage />
+        <Categories />
+        <JobFields />
+        <LandingPage />
+        <AboveFooter />
         <Footer />
       </>
       );
@@ -87,66 +94,12 @@ function App() {
       <>
         <Navbar toggle={toggle} />
         <Dropdown isOpen={isOpen} toggle={toggle} />
+        <AboutCompany />
         <Footer />
       </>
       );
   }
 
-  function Us(){
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggle = () => {
-      setIsOpen(!isOpen);
-    };
-
-    useEffect(() => {
-      const hideMenu = () => {
-        if (window.innerWidth > 768 && isOpen) {
-          setIsOpen(false);
-          // console.log('ABC');
-        }
-      };
-
-      window.addEventListener('resize', hideMenu);
-
-      return () => {
-        window.removeEventListener('resize', hideMenu);
-      };
-    });
-    return (
-      <>
-        <Footer />
-      </>
-      );
-  }
-
-  function Job(){
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggle = () => {
-      setIsOpen(!isOpen);
-    };
-
-    useEffect(() => {
-      const hideMenu = () => {
-        if (window.innerWidth > 768 && isOpen) {
-          setIsOpen(false);
-          // console.log('ABC');
-        }
-      };
-
-      window.addEventListener('resize', hideMenu);
-
-      return () => {
-        window.removeEventListener('resize', hideMenu);
-      };
-    });
-    return (
-      <>
-        <Footer />
-      </>
-      );
-  }
 }
 
 export default App;
