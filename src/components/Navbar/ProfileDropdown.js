@@ -1,8 +1,17 @@
 import React from 'react';
 import './ProfileDropdown.css';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const ProfileDropdown = ({ isOpens, toggles }) => {
+    let navigate =useNavigate();
+    function navigation(){
+        navigate('/');
+    }
+    const logout = () =>{
+        sessionStorage.removeItem("token");
+        navigation();
+    }
     const mystyle = {
         position: "absolute",
         display: "block",
@@ -14,7 +23,7 @@ export const ProfileDropdown = ({ isOpens, toggles }) => {
                 <Link to='/EditProfile'>
                     <li className='text-xl font-semibold p-3'>Edit Profile</li>
                 </Link>
-                <li className='text-xl font-semibold p-3'>Logout</li>
+                <li className='text-xl font-semibold p-3 cursor-pointer' onClick={logout}>Logout</li>
             </ul>
         </div>
     )

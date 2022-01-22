@@ -10,8 +10,8 @@ export const LoginSignup = () => {
 
     const password = React.createRef();
     const username = React.createRef();
-    let navigate =useNavigate();
-    function navigation(){
+    let navigate = useNavigate();
+    function navigation() {
         navigate('/dashboard');
     }
 
@@ -25,6 +25,8 @@ export const LoginSignup = () => {
             password: password.current.value
         }).then((response) => {
             console.log(response);
+            console.log(response.data.token);
+            sessionStorage.setItem("token", response.data.token);
             console.log(response.status);
             if (response.status == 200) {
                 navigation();
@@ -76,15 +78,15 @@ export const LoginSignup = () => {
                             }
                         />
                         <div className="flex items-center mt-3 justify-center">
-                                <button
+                            <button
                                 type='submit'
-                                    className={
-                                        "bg-blue-700 hover:bg-blue-500 py-2 px-10 text-md text-white rounded border border-blue focus:outline-none focus:border-black"
-                                    }
-                                    value="Login"
-                                >
-                                    LOGIN
-                                </button>
+                                className={
+                                    "bg-blue-700 hover:bg-blue-500 py-2 px-10 text-md text-white rounded border border-blue focus:outline-none focus:border-black"
+                                }
+                                value="Login"
+                            >
+                                LOGIN
+                            </button>
                         </div>
                     </form>
                     <div className="flex items-center mt-3 justify-center">

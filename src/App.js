@@ -15,6 +15,7 @@ import { AboutUs } from './pages/About/AboutUs/AboutUs';
 import { Jobs } from './pages/Jobs/Jobs';
 import { Posts } from './pages/Posts/Posts';
 import { EditProfile } from './pages/EditProfile/EditProfile';
+import { DetailedProfile } from './pages/DetailedProfile/DetailedProfile'
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -38,6 +39,8 @@ function App() {
           <Route exact path="/Posts" element={<Post />} />
 
           <Route exact path="/EditProfile" element={<Edit />} />
+
+          <Route exact path="/DetailedProfile" element={<Detailed />} />
 
           <Route exact path="/AboutCompany" element={<Companies />} />
 
@@ -111,10 +114,18 @@ function App() {
         window.removeEventListener('resize', hideMenu);
       };
     });
+
+    const [isOpens, setIsOpens] = useState(false);
+
+    const toggles = () => {
+      setIsOpens(!isOpens);
+    };
+
     return (
       <>
-        <Navbar toggle={toggle} />
+        <Navbar toggle={toggle} toggles={toggles} />
         <Dropdown isOpen={isOpen} toggle={toggle} />
+        <ProfileDropdown isOpens={isOpens} toggle={toggles} />
         <AboutCompany />
         <Footer />
       </>
@@ -232,6 +243,35 @@ function App() {
     return (
       <>
         <EditProfile />
+        <Footer />
+      </>
+      );
+  }
+
+  function Detailed(){
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+      setIsOpen(!isOpen);
+    };
+
+    useEffect(() => {
+      const hideMenu = () => {
+        if (window.innerWidth > 768 && isOpen) {
+          setIsOpen(false);
+          // console.log('ABC');
+        }
+      };
+
+      window.addEventListener('resize', hideMenu);
+
+      return () => {
+        window.removeEventListener('resize', hideMenu);
+      };
+    });
+    return (
+      <>
+        <DetailedProfile />
         <Footer />
       </>
       );
