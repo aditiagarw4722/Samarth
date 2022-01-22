@@ -17,8 +17,11 @@ module.exports = {
     "./src/pages/Jobs/JobsList.js",
     "./src/pages/Jobs/JobsLists.js",
     "./src/pages/Jobs/JobsSearch.js",
-    "./src/pages/Navbar/Navbar.js",
+    "./src/pages/Jobs/Navbar.js",
     "./src/pages/About/Navbar/Navbar.js",
+    "./src/pages/Posts/Navbar/Navbar.js",
+    "./src/pages/Posts/Posts.js",
+    "./src/pages/EditProfile/EditProfile.js",
   ],
   theme: {
     extend: {},
