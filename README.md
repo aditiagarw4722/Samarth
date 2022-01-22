@@ -5,14 +5,6 @@
 > I don't need easy.I just need possible.
 </center>
 
----
-<p>
-  <a href="#" target="_blank">
-    <img alt="made-by-name.txt" src="#" />
-  </a>
-
-</p>
-
 
 Samarth is a project that aims to provide employment opportunities for people with different types of disabilities. Society has had a reflectance towards people with disabilities and has had reservations about them becoming self-sufficient parts of the community; this is what we aim to tackle with our project.
 
