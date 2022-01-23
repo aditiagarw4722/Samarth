@@ -141,9 +141,9 @@ function App() {
   function Us(){
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-      setIsOpen(!isOpen);
-    };
+    // const toggle = () => {
+    //   setIsOpen(!isOpen);
+    // };
 
     useEffect(() => {
       const hideMenu = () => {
@@ -170,9 +170,9 @@ function App() {
   function Job(){
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-      setIsOpen(!isOpen);
-    };
+    // const toggle = () => {
+    //   setIsOpen(!isOpen);
+    // };
 
     useEffect(() => {
       const hideMenu = () => {
@@ -199,9 +199,9 @@ function App() {
   function Post(){
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-      setIsOpen(!isOpen);
-    };
+    // const toggle = () => {
+    //   setIsOpen(!isOpen);
+    // };
 
     useEffect(() => {
       const hideMenu = () => {
@@ -228,9 +228,9 @@ function App() {
   function Edit(){
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-      setIsOpen(!isOpen);
-    };
+    // const toggle = () => {
+    //   setIsOpen(!isOpen);
+    // };
 
     useEffect(() => {
       const hideMenu = () => {
@@ -257,9 +257,9 @@ function App() {
   function Detailed(){
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-      setIsOpen(!isOpen);
-    };
+    // const toggle = () => {
+    //   setIsOpen(!isOpen);
+    // };
 
     useEffect(() => {
       const hideMenu = () => {
@@ -286,9 +286,9 @@ function App() {
   function Jobss(){
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-      setIsOpen(!isOpen);
-    };
+    // const toggle = () => {
+    //   setIsOpen(!isOpen);
+    // };
 
     useEffect(() => {
       const hideMenu = () => {
@@ -315,9 +315,9 @@ function App() {
   function Jobsss(){
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-      setIsOpen(!isOpen);
-    };
+    // const toggle = () => {
+    //   setIsOpen(!isOpen);
+    // };
 
     useEffect(() => {
       const hideMenu = () => {

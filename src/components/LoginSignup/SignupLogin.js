@@ -28,13 +28,13 @@ export const SignupLogin = () => {
         }).then((response) => {
             console.log(response);
             console.log(response.status);
-            if (response.status == 201) {
+            if (response.status === 201) {
                 swal("SUCCESS!", "User has been created successfully!", "success");
             }
         }).catch((err) => {
             console.log(err);
             console.log(err.response.status);
-            if (err.response.status == 400) {
+            if (err.response.status === 400) {
                 swal("ERROR!", "Username/Email is already used!", "error");
             }
         })

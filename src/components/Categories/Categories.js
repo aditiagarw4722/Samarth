@@ -15,6 +15,8 @@ export const Categories = () => {
         getData: []
     })
 
+    console.log(data);
+
     useEffect(() => {
         axios.post('https://samarthbackend.herokuapp.com/findAllJobPos').then((response) => {
             setData({

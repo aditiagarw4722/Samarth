@@ -29,13 +29,13 @@ export const LoginSignup = () => {
             console.log(response.data.token);
             sessionStorage.setItem("token", response.data.token);
             console.log(response.status);
-            if (response.status == 200) {
+            if (response.status === 200) {
                 navigation();
             }
         }).catch((err) => {
             console.log(err);
             console.log(err.response.status);
-            if (err.response.status == 400) {
+            if (err.response.status === 400) {
                 swal("ERROR!", "Use valid Username/Password!", "error");
             }
         })

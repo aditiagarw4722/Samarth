@@ -17,13 +17,15 @@ export const MainPage = () => {
         getData: []
     })
 
+    console.log(data);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         sessionStorage.setItem("location",searchlocation.current.value)
         sessionStorage.setItem("job",searchjob.current.value)
         navigation();
 
-        if (searchjob.current.value == "") {
+        if (searchjob.current.value === "") {
             axios.post('https://samarthbackend.herokuapp.com/findAllJobPos',{"jobInfo.location":searchlocation.current.value}).then((response) => {
                 setData({
                     getData: response.data.data.jobs
@@ -33,7 +35,7 @@ export const MainPage = () => {
                 console.log(err);
             })
         }
-        else if (searchlocation.current.value == "") {
+        else if (searchlocation.current.value === "") {
             axios.post('https://samarthbackend.herokuapp.com/findAllJobPos',{"jobInfo.title":searchjob.current.value}).then((response) => {
                 setData({
                     getData: response.data.data.jobs

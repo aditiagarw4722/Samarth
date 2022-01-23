@@ -81,9 +81,9 @@ export const EditProfile = () => {
                 }).then((response) => {
                     console.log(response);
                     console.log(response.status);
-                    // if (response.status == 201) {
-                    //     navigation();
-                    // }
+                    if (response.status === 201) {
+                        navigation();
+                    }
                 }).catch((err) => {
                         console.log(err);
                         console.log(err.response.status);

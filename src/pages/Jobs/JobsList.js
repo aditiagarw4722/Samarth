@@ -29,7 +29,7 @@ export const JobsList = () => {
         }).catch((err) => {
             console.log(err);
         })
-    }, []);
+    });
 
     return (
         <>

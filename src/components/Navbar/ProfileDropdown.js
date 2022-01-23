@@ -15,7 +15,7 @@ export const ProfileDropdown = ({ isOpens, toggles }) => {
     const mystyle = {
         position: "absolute",
         display: "block",
-        marginLeft: "1200px",
+        marginLeft: "1375px",
     };
     return (
         <div className={isOpens ? 'bg-gray-100' : 'hidden'} onClick={toggles}>

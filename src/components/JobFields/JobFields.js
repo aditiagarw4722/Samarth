@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React from 'react';
 import Job from "../../assets/Job.svg";
 import Job_One from "../../assets/Job_One.svg";
 import Job_Two from "../../assets/Job_Two.svg";

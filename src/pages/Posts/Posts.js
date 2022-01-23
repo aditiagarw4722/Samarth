@@ -76,7 +76,7 @@ export const Posts = () => {
         }).then((response) => {
             console.log(response);
             console.log(response.status);
-            if (response.status == 201) {
+            if (response.status === 201) {
                 navigation();
             }
         }).catch((err) => {

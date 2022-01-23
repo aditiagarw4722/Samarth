@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Google from "../../assets/Google.svg";
 import Bookmark from "../../assets/Bookmark.svg";
@@ -15,7 +14,7 @@ export const JobsListSecond = () => {
     })
 
     useEffect(() => {
-        if (sessionStorage.getItem("job") == "") {
+        if (sessionStorage.getItem("job") === "") {
             axios.post('https://samarthbackend.herokuapp.com/findAllJobPos',{"jobInfo.location":sessionStorage.getItem("location")}).then((response) => {
                 setData({
                     getData: response.data.data.jobs
@@ -25,7 +24,7 @@ export const JobsListSecond = () => {
                 console.log(err);
             })
         }
-        else if (sessionStorage.getItem("location") == "") {
+        else if (sessionStorage.getItem("location") === "") {
             axios.post('https://samarthbackend.herokuapp.com/findAllJobPos',{"jobInfo.title":sessionStorage.getItem("job")}).then((response) => {
                 setData({
                     getData: response.data.data.jobs
