@@ -7,28 +7,45 @@ import CurrencyRupeeRoundedIcon from '@mui/icons-material/CurrencyRupeeRounded';
 import AccessibleForwardOutlinedIcon from '@mui/icons-material/AccessibleForwardOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 
-export const JobsList = () => {
+export const JobsListSecond = () => {
 
-    let location = useLocation();
-    // console.log(location.state);
-    console.log(location.state.disabilityType);
 
     const [data, setData] = useState({
         getData: []
     })
 
     useEffect(() => {
-        axios.post('https://samarthbackend.herokuapp.com/findAllJobPos', {
-            "jobInfo.disabilityType": location.state.disabilityType
-        }).then((response) => {
+        if (sessionStorage.getItem("job") == "") {
+            axios.post('https://samarthbackend.herokuapp.com/findAllJobPos',{"jobInfo.location":sessionStorage.getItem("location")}).then((response) => {
+                setData({
+                    getData: response.data.data.jobs
+                });
+                console.log(response.data.data.jobs);
+            }).catch((err) => {
+                console.log(err);
+            })
+        }
+        else if (sessionStorage.getItem("location") == "") {
+            axios.post('https://samarthbackend.herokuapp.com/findAllJobPos',{"jobInfo.title":sessionStorage.getItem("job")}).then((response) => {
+                setData({
+                    getData: response.data.data.jobs
+                });
+                console.log(response.data.data.jobs);
+            }).catch((err) => {
+                console.log(err);
+            })
+        }
+        else{
+            axios.post('https://samarthbackend.herokuapp.com/findAllJobPos',{"jobInfo.title":sessionStorage.getItem("job"),"jobInfo.location":sessionStorage.getItem("location")}).then((response) => {
+                setData({
+                    getData: response.data.data.jobs
+                });
+                console.log(response.data.data.jobs);
+            }).catch((err) => {
+                console.log(err);
+            })
+        }
 
-            setData({
-                getData: response.data.data.jobs
-            });
-            console.log(response.data.data.jobs);
-        }).catch((err) => {
-            console.log(err);
-        })
     }, []);
 
     return (

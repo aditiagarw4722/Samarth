@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import Logo from "../../../assets/Logo.svg";
+import Logo from "../../../assets/MainLogo.svg";
 import Bell from "../../../assets/Bell.svg";
 import Profile from "../../../assets/Profile.svg";
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
@@ -14,8 +14,7 @@ export const Navbar = ({ toggle }) => {
         >
             <Link to='/dashboard'>
                 <div className='flex'>
-                    <img src={Logo} alt='img' className='w-10 h-10 ml-14' />
-                    <span className='text-3xl font-bold text-black ml-3'>HireMe</span>
+                    <img src={Logo} alt='img' className='w-72 h-14' />
                 </div>
             </Link>
             <div className='px-4 cursor-pointer md:hidden' onClick={toggle}>

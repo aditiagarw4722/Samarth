@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import Logo from "../../../assets/Logo.svg";
+import Logo from "../../../assets/MainLogo.svg";
 import Bell from "../../../assets/Bell.svg";
 import Profile from "../../../assets/Profile.svg";
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
@@ -14,8 +14,7 @@ export const Navbar = ({ toggle }) => {
         >
             <Link to='/dashboard'>
                 <div className='flex'>
-                    <img src={Logo} alt='img' className='w-10 h-10 ml-14' />
-                    <span className='text-3xl font-bold text-black ml-3'>HireMe</span>
+                    <img src={Logo} alt='img' className='w-72 h-14' />
                 </div>
             </Link>
             <div className='px-4 cursor-pointer md:hidden' onClick={toggle}>
@@ -42,7 +41,7 @@ export const Navbar = ({ toggle }) => {
                     <span className='text-xl font-bold text-black ml-8'>Jobs</span>
                 </Link>
                 <Link to='/Posts'>
-                    <button className="bg-violet-500 hover:bg-violet-700 text-white font-bold rounded ml-10 py-2 px-8">
+                    <button className="bg-indigo-700 hover:bg-indigo-700 text-white font-bold rounded ml-10 py-2 px-8">
                         Post a Job
                     </button>
                 </Link>

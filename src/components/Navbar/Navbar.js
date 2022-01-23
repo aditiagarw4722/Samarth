@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import Logo from "../../assets/Logo.svg";
+import Logo from "../../assets/MainLogo.svg";
 import Bell from "../../assets/Bell.svg";
 import Profile from "../../assets/Profile.svg";
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
@@ -14,8 +14,7 @@ export const Navbar = ({ toggle, toggles }) => {
         >
             <Link to='/dashboard'>
                 <div className='flex'>
-                    <img src={Logo} alt='img' className='w-10 h-10 ml-14' />
-                    <span className='text-3xl font-bold text-black ml-3'>HireMe</span>
+                    <img src={Logo} alt='img' className='w-72 h-14' />
                 </div>
             </Link>
             <div className='px-4 cursor-pointer md:hidden' onClick={toggle}>
@@ -35,10 +34,10 @@ export const Navbar = ({ toggle, toggles }) => {
                 </svg>
             </div>
             <div className='pr-8 md:flex hidden'>
-                <Link to='/AboutUs' className='mt-1'>
+                <Link to='/AboutUs' className='mt-2'>
                     <span className='text-xl font-bold text-black'>About Us</span>
                 </Link>
-                <Link to='/Jobs' className='mt-1'>
+                <Link to='/View' className='mt-2'>
                     <span className='text-xl font-bold text-blac ml-8'>Jobs</span>
                 </Link>
                 <Link to='/Posts'>
@@ -48,7 +47,7 @@ export const Navbar = ({ toggle, toggles }) => {
                 </Link>
                 <img src={Bell} alt='img' className='w-10 h-9 ml-10 mr-8 mt-1' />
                 <div className='flex flex-row bg-gray-300 py-2 px-1 rounded-full'>
-                    <img src={Profile} alt='img' className='w-10 h-9 ml-2 mt-1' />
+                    <img src={Profile} alt='img' className='w-10 h-9 ml-2' />
                     <KeyboardArrowDownOutlinedIcon className='mt-2 cursor-pointer' onClick={toggles}></KeyboardArrowDownOutlinedIcon>
                 </div>
             </div>

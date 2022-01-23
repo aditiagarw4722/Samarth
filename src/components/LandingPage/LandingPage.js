@@ -13,7 +13,7 @@ export const LandingPage = () => {
     })
 
     useEffect(() => {
-        axios.get('https://hackjobportal.herokuapp.com/findSpecificJob?limit=6').then((response) => {
+        axios.get('https://samarthbackend.herokuapp.com/findSpecificJob?limit=6').then((response) => {
             setData({
                 getData: response.data.data.jobs
             });
@@ -71,9 +71,11 @@ export const LandingPage = () => {
 
             <div className='grid grid-cols-6'>
                 <div className="col-start-3 col-span-3">
-                    <button className="bg-transparent text-violet-700 font-bold border border-violet-700 border-2 rounded py-2 px-8 mt-14 ml-36 ">
-                        View All
-                    </button>
+                    <Link to='/View'>
+                        <button className="bg-transparent text-indigo-700 font-bold border border-indigo-700 border-2 rounded py-2 px-8 mt-14 ml-36 ">
+                            View All
+                        </button>
+                    </Link>
                 </div>
             </div>
         </>

@@ -26,13 +26,13 @@ export const JobsSearch = () => {
                             />
                         </div>
                     </div>
-                    <button class="bg-violet-500 hover:bg-violet-700 text-white font-bold px-6 ml-5 mb-3 rounded">
+                    <button class="bg-indigo-700 hover:bg-indigo-700 text-white font-bold px-6 ml-5 mb-3 rounded">
                         Search
                     </button>
                 </div>
             </div>
             <div>
-                <button className="bg-transparent text-violet-700 font-bold border border-violet-700 border-2 rounded ml-44 py-2 px-8">
+                <button className="bg-transparent text-indigo-700 font-bold border border-indigo-700 border-2 rounded ml-44 py-2 px-8">
                     Sort by
                 </button>
             </div>

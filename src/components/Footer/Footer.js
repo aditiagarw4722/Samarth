@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import Logo from "../../assets/Logo.svg";
+import Logo from "../../assets/MainLogo.svg";
 
 export const Footer = () => {
     return (
@@ -8,8 +8,7 @@ export const Footer = () => {
             <div className=" container flex flex-col flex-wrap px-4 mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap">
                 <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left mt-12">
                     <div className='flex'>
-                        <img src={Logo} alt='img' className='w-10 h-10 ml-14' />
-                        <span className='text-3xl font-bold text-black ml-3'>HireMe</span>
+                        <img src={Logo} alt='img' className='w-60' />
                     </div>
                     <div class="flex justify-center mt-4 lg:mt-7">
                         <a>

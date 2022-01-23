@@ -26,8 +26,8 @@ export const Posts = () => {
     const benefits = React.createRef();
     const stages = React.createRef();
 
-    let navigate =useNavigate();
-    function navigation(){
+    let navigate = useNavigate();
+    function navigation() {
         navigate('/dashboard');
     }
 
@@ -42,7 +42,7 @@ export const Posts = () => {
 
         var auth = sessionStorage.getItem('token');
         console.log(auth);
-        axios.post("https://hackjobportal.herokuapp.com/createJob", {
+        axios.post("https://samarthbackend.herokuapp.com/createJob", {
             jobInfo: {
                 title: jobtitle.current.value,
                 type: jobtype.current.value,
@@ -110,20 +110,21 @@ export const Posts = () => {
                             <div class="col-span-6 sm:col-span-3">
                                 <label class="my-2 text-xl block ml-10">Job Category</label>
                                 <select className='p-2 rounded-lg block w-11/12 ml-10 border-2 border-gray-500' ref={jobcategory}>
-                                    <option value="grapefruit">Grapefruit</option>
-                                    <option value="lime">Lime</option>
-                                    <option selected value="coconut">Coconut</option>
-                                    <option value="mango">Mango</option>
+                                    <option value="software engineer">Software Engineer</option>
+                                    <option value="sales manager">Sales Manager</option>
+                                    <option selected value="office assistant">Office Assistant</option>
+                                    <option value="marketing manager">Marketing Manager</option>
+                                    <option value="executive assistant">Executive Assistant</option>
+                                    <option value="design">Design</option>
                                 </select>
                             </div>
 
                             <div class="col-span-6 sm:col-span-3">
                                 <label class="my-2 text-xl block ml-10">Job Type</label>
                                 <select className='p-2 rounded-lg block w-10/12 ml-10 border-2 border-gray-500' ref={jobtype}>
-                                    <option value="grapefruit">Grapefruit</option>
-                                    <option value="lime">Lime</option>
-                                    <option selected value="coconut">Coconut</option>
-                                    <option value="mango">Mango</option>
+                                    <option value="full time">Full Time</option>
+                                    <option value="part time">Part Time</option>
+                                    <option selected value="internship">Internship</option>
                                 </select>
                             </div>
                         </div>
@@ -132,10 +133,10 @@ export const Posts = () => {
                             <div class="col-span-6 sm:col-span-3">
                                 <label class="my-2 text-xl block ml-10">Seniority/Experience Level</label>
                                 <select className='p-2 rounded-lg block w-11/12 ml-10 border-2 border-gray-500' ref={experience}>
-                                    <option value="grapefruit">Grapefruit</option>
-                                    <option value="lime">Lime</option>
-                                    <option selected value="coconut">Coconut</option>
-                                    <option value="mango">Mango</option>
+                                    <option value="fresher">Fresher</option>
+                                    <option value="1-3 Year">1-3 Year</option>
+                                    <option selected value="3-5 Year">3-5 Year</option>
+                                    <option value="5+">5+ Year</option>
                                 </select>
                             </div>
 
@@ -154,10 +155,12 @@ export const Posts = () => {
                             <div class="col-span-6 sm:col-span-3">
                                 <label class="my-2 text-xl block ml-10">Disability</label>
                                 <select className='p-2 rounded-lg block w-10/12 ml-10 border-2 border-gray-500' ref={disable}>
-                                    <option value="grapefruit">Grapefruit</option>
-                                    <option value="lime">Lime</option>
-                                    <option selected value="coconut">Coconut</option>
-                                    <option value="mango">Mango</option>
+                                    <option value="visually impaired">Visually Impaired</option>
+                                    <option value="hard of hearing">Hard of Hearing</option>
+                                    <option selected value="wheelchair bound">Wheelchair Bound</option>
+                                    <option value="autism">Autism</option>
+                                    <option value="dumb and deaf">Dumb and Deaf</option>
+                                    <option value="disabled person">Disabled person</option>
                                 </select>
                             </div>
                         </div>
@@ -187,10 +190,10 @@ export const Posts = () => {
                             <div class="col-span-6 sm:col-span-3">
                                 <label class="my-2 text-xl block ml-10">Company Size</label>
                                 <select className='p-2 rounded-lg block w-11/12 ml-10 border-2 border-gray-500' ref={size}>
-                                    <option value="grapefruit">Grapefruit</option>
-                                    <option value="lime">Lime</option>
-                                    <option selected value="coconut">Coconut</option>
-                                    <option value="mango">Mango</option>
+                                    <option value="1-10">1-10</option>
+                                    <option value="10-50">10-50</option>
+                                    <option selected value="50-500">50-500</option>
+                                    <option value="500+">500+</option>
                                 </select>
                             </div>
 
@@ -242,7 +245,7 @@ export const Posts = () => {
                             <textarea type="text" class="p-2 rounded-lg block w-11/12 ml-10 pb-20 border-2 border-gray-500" placeholder="Your Name" ref={stages} />
                         </div>
                         <div>
-                            <button className="bg-violet-500 hover:bg-violet-700 text-white font-bold rounded ml-10 px-8 py-3 mt-16" type='submit'>
+                            <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold rounded ml-10 px-8 py-3 mt-16" type='submit'>
                                 Submit
                             </button>
                         </div>

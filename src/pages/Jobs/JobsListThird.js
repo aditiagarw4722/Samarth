@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Google from "../../assets/Google.svg";
 import Bookmark from "../../assets/Bookmark.svg";
@@ -7,21 +6,14 @@ import CurrencyRupeeRoundedIcon from '@mui/icons-material/CurrencyRupeeRounded';
 import AccessibleForwardOutlinedIcon from '@mui/icons-material/AccessibleForwardOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 
-export const JobsList = () => {
-
-    let location = useLocation();
-    // console.log(location.state);
-    console.log(location.state.disabilityType);
+export const JobsListThird = () => {
 
     const [data, setData] = useState({
         getData: []
     })
 
     useEffect(() => {
-        axios.post('https://samarthbackend.herokuapp.com/findAllJobPos', {
-            "jobInfo.disabilityType": location.state.disabilityType
-        }).then((response) => {
-
+        axios.get('https://samarthbackend.herokuapp.com/findAllJob').then((response) => {
             setData({
                 getData: response.data.data.jobs
             });

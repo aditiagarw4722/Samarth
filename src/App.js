@@ -13,6 +13,8 @@ import { JobFields } from './components/JobFields/JobFields';
 import { AboutCompany } from './components/AboutCompany/AboutCompany';
 import { AboutUs } from './pages/About/AboutUs/AboutUs';
 import { Jobs } from './pages/Jobs/Jobs';
+import { JobsSecond } from './pages/Jobs/JobsSecond';
+import { JobsThird } from './pages/Jobs/JobsThird';
 import { Posts } from './pages/Posts/Posts';
 import { EditProfile } from './pages/EditProfile/EditProfile';
 import { DetailedProfile } from './pages/DetailedProfile/DetailedProfile'
@@ -35,6 +37,10 @@ function App() {
           <Route exact path="/AboutUs" element={<Us />} />
 
           <Route exact path="/Jobs" element={<Job />} />
+
+          <Route exact path="/SearchJobs" element={<Jobss />} />
+
+          <Route exact path="/View" element={<Jobsss />} />
 
           <Route exact path="/Posts" element={<Post />} />
 
@@ -272,6 +278,64 @@ function App() {
     return (
       <>
         <DetailedProfile />
+        <Footer />
+      </>
+      );
+  }
+
+  function Jobss(){
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+      setIsOpen(!isOpen);
+    };
+
+    useEffect(() => {
+      const hideMenu = () => {
+        if (window.innerWidth > 768 && isOpen) {
+          setIsOpen(false);
+          // console.log('ABC');
+        }
+      };
+
+      window.addEventListener('resize', hideMenu);
+
+      return () => {
+        window.removeEventListener('resize', hideMenu);
+      };
+    });
+    return (
+      <>
+        <JobsSecond />
+        <Footer />
+      </>
+      );
+  }
+
+  function Jobsss(){
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+      setIsOpen(!isOpen);
+    };
+
+    useEffect(() => {
+      const hideMenu = () => {
+        if (window.innerWidth > 768 && isOpen) {
+          setIsOpen(false);
+          // console.log('ABC');
+        }
+      };
+
+      window.addEventListener('resize', hideMenu);
+
+      return () => {
+        window.removeEventListener('resize', hideMenu);
+      };
+    });
+    return (
+      <>
+        <JobsThird />
         <Footer />
       </>
       );
