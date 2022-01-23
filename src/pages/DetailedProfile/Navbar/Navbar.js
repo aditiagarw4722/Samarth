@@ -37,7 +37,7 @@ export const Navbar = ({ toggle }) => {
                 <Link to='/AboutUs' className='mt-1'>
                     <span className='text-xl font-bold text-black'>About Us</span>
                 </Link>
-                <Link to='/Jobs' className='mt-1'>
+                <Link to='/View' className='mt-1'>
                     <span className='text-xl font-bold text-black ml-8'>Jobs</span>
                 </Link>
                 <Link to='/Posts'>

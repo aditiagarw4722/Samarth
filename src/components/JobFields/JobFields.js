@@ -35,7 +35,7 @@ export const JobFields = () => {
         <>
             <div className='bg-indigo-50 pt-1 mb-20 mt-28 pb-32'>
                 <h2 className='text-6xl font-semibold text-center text-black mt-16 mb-20'>Various Job Fields</h2>
-                <div className='flex flex-row scroll-pl-6 snap-x ml-14'>
+                <div className='flex flex-row scroll-pl-6 snap-x ml-40'>
                     <div className="w-60 rounded-xl shadow-lg bg-white ml-16 hover:animate-bounce">
                         <div className="px-6 py-4">
                             <img src={Job} alt='img' className='ml-20 mt-5 mr-36' />
