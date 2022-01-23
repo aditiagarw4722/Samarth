@@ -81,16 +81,16 @@ export const Footer = () => {
                         </h2>
                         <ul className="mb-8 space-y-2 text-sm list-none">
                             <li className='text-left'>
-                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-14" href=''>About Us</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-14" href='/dashboard'>About Us</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-12" href=''>Our Mission</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-12" href='/dashboard'>Our Mission</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-12" href=''>Contact Us</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-12" href='/dashboard'>Contact Us</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-20" href=''>Blog</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-20" href='/dashboard'>Blog</a>
                             </li>
                         </ul>
                     </div>
@@ -100,13 +100,13 @@ export const Footer = () => {
                         </h2>
                         <ul className="mb-8 space-y-2 text-sm list-none">
                             <li className='text-left'>
-                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-14" href=''>Post a job</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-14" href='/dashboard'>Post a job</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-12" href=''>Help</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg mr-12" href='/dashboard'>Help</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-indigo-600 hover:text-indigo-800 mr-12 text-lg" href=''>Grievances</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 mr-12 text-lg" href='/dashboard'>Grievances</a>
                             </li>
                         </ul>
                     </div>
@@ -116,19 +116,19 @@ export const Footer = () => {
                         </h2>
                         <ul className="mb-8 space-y-2 text-sm list-none">
                             <li className='text-left'>
-                                <a className="text-indigo-600 hover:text-indigo-800 text-lg" href=''>Your account</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg" href='/dashboard'>Your account</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-indigo-600 hover:text-indigo-800 text-lg" href=''>Find a job</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg" href='/dashboard'>Find a job</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-indigo-600 hover:text-indigo-800 text-lg" href=''>Grievances</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg" href='/dashboard'>Grievances</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-indigo-600 hover:text-indigo-800 text-lg" href=''>Chat with us</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg" href='/dashboard'>Chat with us</a>
                             </li>
                             <li className='text-left'>
-                                <a className="text-indigo-600 hover:text-indigo-800 text-lg" href=''>Help</a>
+                                <a className="text-indigo-600 hover:text-indigo-800 text-lg" href='/dashboard'>Help</a>
                             </li>
                         </ul>
                     </div>
